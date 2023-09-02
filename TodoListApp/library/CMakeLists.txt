@@ -1,6 +1,6 @@
-# Include Directories
-include_directories(include)
+set(LIB_SOURCES src/Task.cpp)
+set(LIB_HEADERS include/Task.h)
 
-# Create library
-file(GLOB SOURCES "src/*.cpp")
-add_library(TodoLibrary ${SOURCES})
+add_library(TodoListLibrary STATIC ${LIB_SOURCES} ${LIB_HEADERS})
+
+target_include_directories(TodoListLibrary PUBLIC include)
