@@ -32,3 +32,6 @@
 *.app
 /main
 .idea
+/TodoListApp/build/
+/build/
+/cmake-build-debug/

@@ -11,4 +11,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Add subdirectories
 add_subdirectory(library)
 add_subdirectory(program)
-add_subdirectory(tests)
+add_subdirectory(tests)  # If you are including tests
