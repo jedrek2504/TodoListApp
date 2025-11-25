@@ -8,6 +8,9 @@ project(TodoListApp)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Enable ctest
+enable_testing()      
+
 # Add subdirectories
 add_subdirectory(library)
 add_subdirectory(program)

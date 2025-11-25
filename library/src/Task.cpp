@@ -20,6 +20,12 @@ void Task::updateTitle(const std::string &newTitle)
     title = newTitle;
 }
 
+int Task::getId()
+{
+    return id;
+}
+
+///@todo replace with operator overload
 std::string Task::toString() const
 {
     std::ostringstream oss;

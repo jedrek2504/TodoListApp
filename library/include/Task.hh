@@ -17,5 +17,7 @@ public:
     void updateTitle(const std::string &newTitle);
     std::string toString() const;
 
+    int getId();
+
     ~Task();
 };
