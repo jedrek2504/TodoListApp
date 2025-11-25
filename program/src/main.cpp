@@ -1,8 +1,14 @@
 #include <iostream>
+#include "Task.hh"
 
-int main() {
+using namespace std;
 
-    std::cout<<"Hello World!"<<std::endl;
+int main()
+{
+    Task *task1 = new Task(1, "Do dishes", "Dishes are to be done");
+
+    task1->markAsDone();
+    cout << task1->toString() << endl;
 
     return 0;
 }
