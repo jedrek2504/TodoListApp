@@ -1,10 +1,20 @@
 #include <gtest/gtest.h>
+#include "Task.hh"
 
-// Demonstrate some basic assertions.
-TEST(HelloTest, BasicAssertions)
+TEST(TaskTest, ConstructorInitializesFields)
 {
-    // Expect two strings not to be equal.
-    EXPECT_STRNE("hello", "world");
-    // Expect equality.
-    EXPECT_EQ(7 * 6, 42);
+    Task t(1, "Do dishes", "Dishes are to be done");
+
+    std::string s = t.toString();
+    EXPECT_NE(s.find("id: 1"), std::string::npos);
+    EXPECT_NE(s.find("Do dishes"), std::string::npos);
+    EXPECT_NE(s.find("done: false"), std::string::npos);
+}
+
+TEST(TaskTest, MarkAsDoneSetsFlag)
+{
+    Task t(10, "Laundry", "White only");
+    t.markAsDone();
+
+    EXPECT_NE(t.toString().find("done: true"), std::string::npos);
 }
